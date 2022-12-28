@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="mcssam">
+    <meta name="description" content="Portfolio, Float, Eternal Return Template, Pixel Fixed">
+    <title>Portfolio, Float, Eternal Return Template, Pixel Fixed</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="./images/favicon/favicon-32x32.png">
+    <link rel="stylesheet" href="./css/reset.css">
+    <!-- 페이지 CSS -->
+    <link rel="stylesheet" href="./css/eternal_return.css">
+    <!-- 폰트어썸 css-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- JS 플러그인 파일 -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/prefixfree.min.js"></script>
+    <!-- 페이지 JS -->
+    <script src="./js/montblanc.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- Header -->
+        <header>
+            <section class="w1280 cf">
+                <!-- Logo, GNB -->
+                <div class="logo_gnb_top">
+                    <h1 class="logo">
+                        <a href="#">
+                            <img src="./images/er_logo.png" alt="GNB로고">
+                        </a>
+                    </h1>
+                    <nav>
+                        <ul class="gnb">
+                            <li class="depth1">
+                                <a href="#">게임정보</a>
+                                <ul class="depth2">
+                                    <li><a href="#about_us">게임소개</li></a>
+                                    <li>캐릭터</li>
+                                </ul>
+                            </li>
+                            <li class="depth1">
+                                <a href="#">새소식</a>
+                                <ul class="depth2">
+                                    <li>공지사항</li>
+                                    <li>패치노트</li>
+                                    <li>개발일지</li>
+                                </ul>
+                            </li>
+                            <li class="depth1">
+                                <a href="#">커뮤니티</a>
+                                <ul class="depth2">
+                                    <li>게시판</li>
+                                    <li>팬아트</li>
+                                    <li>UCC</li>
+                                </ul>
+                            </li>
+                            <li class="depth1">
+                                <a href="#">고객지원</a>
+                                <ul class="depth2">
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <script>
+                        var depth1 = document.querySelectorAll('.depth1');
+                        depth1[0].addEventListener('click',function(){
+                            
+                        })
+                         var depth1 = $('.depth1');
+                        var depth2 = $('.depth2');
+                        depth1.mouseenter(function(){
+                            depth2.stop().hide();
+                            $(this).children().stop().show();
+                        });
+                        depth2.mouseleave(function(){
+                            depth2.stop().hide();
+                        });
+                    </script>
+                    <div class="playbox">
+                        Game Play!
+                    </div>
+                </div>
+                <!-- /Logo, GNB -->
+                <!-- Search Btn -->
+                <!-- <div class="search"> -->
+                    <!-- <a href="#"><img src="./images/btn_search.png" alt="검색아이콘"></a> -->
+                <!-- </div> -->
+                <!-- /Search Btn -->
+            </section>
+            <!-- ImageText Deco -->
+            <section class="w1280 img_deco">
+                <h2>
+                    <img src="./images/er_logo2.png" alt="상단메인로고">
+                </h2>
+                <ul>
+                    <li><a href="#"><img src="./images/kakaogames.svg" alt="카카오로고"></a></li>
+                    <li><a href="#"><img src="./images/STEAM.svg" alt="스팀로고"></a></li>
+                    <li><a href="#"><img src="./images/Microsoft.svg" alt="윈도우로고"></a></li>
+                </ul>
+
+                <!-- <p>
+                    <button><a href="#">GO TO SHOP</a></button>
+                </p> -->
+            </section>
+            <!-- /Image Text Deco -->
+        </header>
+        <!-- /Header -->
+
+        <!-- Section CardBox -->
+        <section class="card_box">
+            <div class="w1280 cf">
+                <!-- 3단 CardBox -->
+                <section class="slide_box">
+                    <div class="card_box_view slide">
+                        <h2><a href="#"><img src="./images/slide_img (1).png" alt="카드이미지1"></a></h2>
+                        <h3>새소식</h3>
+                        <p>개발팀과의 만남 쿠폰을 안내드립니다.</p>
+                        <p class="card_box_date">2일전</p>
+                    </div>
+                    <div class="card_box_view slide">
+                        <h2><a href="#"><img src="./images/slide_img (2).png" alt="카드이미지2"></a></h2>
+                        <h4>공식방송</h4>
+                        <p>개발팀과의 만남! <br>
+                            <span>방송일정 : 2022년 12월 9일 (금) 18:00</span>
+                        </p>
+                        <p class="card_box_date">2일전</p>
+                    </div>
+                    <div class="card_box_view no_mr slide">
+                        <h2><a href="#"><img src="./images/slide_img (3).png" alt="카드이미지3"></a></h2>
+                        <h5>패치노트</h5>
+                        <p>2022/12/08 패치노트</p>
+                        <p class="card_box_date">1일전</p>
+                    </div>
+                </section>
+                <!-- /3단 CardBox -->
+                <!-- CardBox Text -->
+                <div class="card_box_info cf">
+                    <!-- <h2>Please call out concierge on <span>1-800-995-4810</span></h2> -->
+                    <p>
+                        <a href="#">더보기 <i class="fa fa-angle-double-right next"></i></a>
+                    </p>
+                </div>
+                <!-- /CardBox Text -->
+            </div>
+        </section>
+        <div class="gradientline1"></div>
+        <!-- /Section CardBox -->
+        
+
+        <!-- Section ABOUTUS -->
+        <section class="about_us" id="about_us">
+                <div class="w1280">
+                <h2 class="about_us_title">
+                    게임소개
+                </h2>
+                <article class="about_us_subtitle cf">
+                    <h3 class="subtitle1">
+                        이터널 리턴이란?
+                    </h3>
+                    <h3 class="subtitle2">
+                        실험체
+                    </h3>
+                </article>
+                <article class="about_us_tab">
+                    <h3>
+                        루미아 섬에 오신걸 환영합니다!
+                    </h3>
+                    <p>
+                        세상과는 떨어진 섬 루미아에서,<br>
+                        과학집단 아글라이아가 인간을 대상으로
+                        신인류가 되기 위한 비밀스러운 생존 실험을 벌입니다.<br>
+
+                        생존에 필요한 무기와 방어구를 제작해,
+                        17명의 다른 생존자들을 쓰러트리고 마지막까지 살아남아보세요.<br>
+                    </p>
+                    <h4>
+                        이터널 리턴은 배틀로얄, MOBA, 서바이벌이 <br>
+                        융합된 새로운 형태의 게임입니다.
+                    </h4>
+                    <div class="playcut cf">
+                        <div>
+                            <img src="./images/battle.webp" alt="배틀">
+                            <p>
+                                필요한 재료를 찾아 더욱 강한 무기,
+                                방어구, 회복 아이템을 만들어 보세요.
+                            </p>
+                        </div>
+                        <div>
+                            <img src="./images/crafting.webp" alt="크레프팅">
+                            <p>
+
+                                솔로모드에서 다른 생존자를 모두
+                                쓰러트리거나, 친구와 함께 팀을 맺어
+                                새로운 시너지를 경험해 보세요. 듀오와 스쿼드 모드도 준비되어있습니다.
+                            </p>
+                        </div>
+                        <div>
+                            <img src="./images/survive.webp" alt="생존">
+                            <p>
+                                탐색, 제작, 사냥, 전투 등 매 순간 어떤 행동을 할 지 선택하세요.
+                                승리를 위한 전략을 세워 마지막까지
+                                생존하세요.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+                <article class="character">
+                    <h3> 실험체</h3>
+                    <p>신인류가 되기위해 실험에 동참한 이들을 만나보세요.</p>
+                    <div class="characterbox cf">
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (1).png" alt="나딘">
+                                <p>나딘</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (2).png" alt="나타폰">
+                                <p>나타폰</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (3).png" alt="니키">
+                                <p>니키</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (4).png" alt="다니엘">
+                                <p>다니엘</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (5).png" alt="띠아">
+                                <p>띠아</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (6).png" alt="라우라">
+                                <p>라우라</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (7).png" alt="레녹스">
+                                <p>레녹스</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (8).png" alt="레온">
+                                <p>레온</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (9).png" alt="로지">
+                                <p>로지</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href>
+                                <img src="./images/character (10).png" alt="루크">
+                                <p>루크</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (11).png" alt="리 다이린">
+                                <p>리 다이린</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (12).png" alt="리오">
+                                <p>리오</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (13).png" alt="마르티나">
+                                <p>마르티나</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (14).png" alt="마이">
+                                <p>마이</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (15).png" alt="마커스">
+                                <p>마커스</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (16).png" alt="매그너스">
+                                <p>매그너스</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (17).png" alt="바바라">
+                                <p>바바라</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (18).png" alt="버니스">
+                                <p>버니스</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (19).png" alt="비앙카">
+                                <p>비앙카</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (20).png" alt="셀린">
+                                <p>셀린</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (21).png" alt="쇼우">
+                                <p>쇼우</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (22).png" alt="쇼이치">
+                                <p>쇼이치</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (23).png" alt="수아">
+                                <p>수아</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (24).png" alt="시셀라">
+                                <p>시셀라</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (25).png" alt="실비아">
+                                <p>실비아</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (26).png" alt="아델라">
+                                <p>아델라</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (27).png" alt="아드리아나">
+                                <p>아드리아나</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (28).png" alt="아디나">
+                                <p>아디나</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (29).png" alt="아야">
+                                <p>아야</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (30).png" alt="아이솔">
+                                <p>아이솔</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (31).png" alt="아이작">
+                                <p>아이작</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (32).png" alt="알렉스">
+                                <p>알렉스</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (33).png" alt="얀">
+                                <p>얀</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (34).png" alt="에스텔">
+                                <p>에스텔</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (35).png" alt="에이든">
+                                <p>에이든</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (36).png" alt="에키온">
+                                <p>에키온</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (37).png" alt="엘레나">
+                                <p>엘레나</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (38).png" alt="엠마">
+                                <p>엠마</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (39).png" alt="요한">
+                                <p>요한</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (40).png" alt="윌리엄">
+                                <p>윌리엄</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (41).png" alt="유키">
+                                <p>유키</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (42).png" alt="이렘">
+                                <p>이렘</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (43).png" alt="이바">
+                                <p>이바</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (44).png" alt="일레븐">
+                                <p>일레븐</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (45).png" alt="자히르">
+                                <p>자히르</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (46).png" alt="재키">
+                                <p>재키</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (47).png" alt="제니">
+                                <p>제니</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (48).png" alt="카밀로">
+                                <p>카밀로</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (49).png" alt="칼라">
+                                <p>칼라</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (50).png" alt="캐시">
+                                <p>캐시</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (51).png" alt="클로에">
+                                <p>클로에</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (52).png" alt="키아라">
+                                <p>키아라</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (53).png" alt="타지아">
+                                <p>타지아</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (54).png" alt="펠릭스">
+                                <p>펠릭스</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (55).png" alt="프리야">
+                                <p>프리야</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (56).png" alt="피오라">
+                                <p>피오라</p>
+                            </a>
+                        </div>                        
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (57).png" alt="피올로">
+                                <p>피올로</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (58).png" alt="하트">
+                                <p>하트</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (59).png" alt="헤이즈">
+                                <p>헤이즈</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (60).png" alt="현우">
+                                <p>현우</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/character (61).png" alt="혜진">
+                                <p>혜진</p>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <script>
+            // 이터널리턴이란? // 실험체 버튼 상호작용
+            var subtitle1 = $('.subtitle1');
+            var subtitle2 = $('.subtitle2');
+            var button1 = $('.about_us .about_us_subtitle h3:nth-child(1)');
+            var button2 = $('.about_us .about_us_subtitle h3:nth-child(2)');
+            
+            // 마우스 호버효과
+            $(subtitle1).mouseover(function(){$(subtitle1).css({transitionDuration:'.3s', color:"rgb(240, 210, 90)"})});
+            $(subtitle1).mouseleave(function(){$(subtitle1).css({color:"#e1e1e1"})});
+
+            $(subtitle2).mouseover(function(){$(subtitle2).css({transitionDuration:'.3s', color:"rgb(240, 210, 90)"})});
+            $(subtitle2).mouseleave(function(){$(subtitle2).css({color:"#e1e1e1"})});
+            // 마우스 호버효과 끝
+            
+            // 클릭시 display 전환
+            $(subtitle2).click(function(){
+                $('.about_us_tab').stop().slideUp();
+                $('.character').stop().slideDown();
+                $(button1).css({transitionDuration:'.1s', borderTop:'0', borderRight:'0', borderBottom:'1px solid #aaa',  marginTop:'8px'})
+                $(button2).css({transitionDuration:'.1s', borderTop:'8px solid rgb(110, 30, 30)', borderLeft:'1px solid #aaa', borderBottom:'0', marginTop:'0'})
+            });
+            $(subtitle1).click(function(){
+                $('.character').stop().slideUp();
+                $('.about_us_tab').stop().slideDown();
+                $(button2).css({transitionDuratiofn:'.1s', borderTop:'0', borderLeft:'0', borderBottom:'1px solid #aaa', marginTop:'8px'})
+                $(button1).css({transitionDuration:'.1s', borderTop:'8px solid rgb(110, 30, 30)', borderRight:'1px solid #aaa', borderBottom:'0', marginTop:'0'})
+            });
+            // 클릭시 display 전환 끝
+        </script>
+        <!-- Footer -->
+        <footer class="footer">
+            <section class="w1280 cf">
+                <article class="footer_nimbleneuron cf">
+                    <img src="./images/logo-nimbleneuron.png" alt="님블뉴런로고">
+                    <p>
+                        COPYRIGHT ©2020 NIMBLE NEURON CORPORATION. ALL RIGHTS RESERVED.<br>
+                        PARTNERSHIP INQUIRIES: eternalreturn@nimbleneuron.com
+                    </p>
+                </article>
+                <article class="footer_information cf">
+                    <img src="./images/15yearold.png" alt="15세이용가">
+                    <img src="./images/violence.png" alt="폭력성">
+                    <table>
+                        <tr>
+                            <th>제명</th>
+                            <td>이터널 리턴</td>
+                            <th>상호</th>
+                            <td>주식회사 님블뉴런</td>
+                        </tr>
+                        <tr>
+                            <th>이용등급</th>
+                            <td>15세 이용가</td>
+                            <th>등급분류번호</th>
+                            <td>GC-CC-NP-191115-003</td>
+                        </tr>
+                        <tr>
+                            <th>등급분류 일자</th>
+                            <td>2019년 11월 15일</td>
+                            <th>제작 배급업 신고번호</th>
+                            <td>제 2013-000005호</td>
+                        </tr>
+                    </table>
+                </article>
+            </section>
+        </footer>
+        <!-- /Footer -->
+    </div>
+    <script>
+        $('a').click(function(e){
+            e.preventDefault();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,525 @@
+@charset "utf-8";
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+/* Safe Area */
+.w1280 {
+    width: 1280px;
+    margin: 0 auto;
+}
+#wrap {
+    max-width: 1920px;
+    margin: 0 auto;
+    background-color: #111;
+}
+.line {
+    width: 110px;
+    height: 2px;
+    border-bottom: 1px solid #fc3;
+    margin-bottom: 60px;
+    /* 데코라인 가운데 오게 하기 */
+    margin: 0 auto;
+}
+.gradientline1{
+    width: 100%;
+    height: 100px;
+    background: -webkit-linear-gradient(270deg, #111, #000 90%, #000);
+}
+/* Header */
+header {
+    height: 900px;
+    background-image: url('../images/bg_battle1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-size: cover; */
+    background-size: 100% 100%;
+    padding-top: 24px;
+    /* background: -webkit-linear-gradient(top, #111, #111 15%, white 40%, white 60%, #111 75%); */
+    
+}
+header .logo_gnb_top {
+    position: relative;
+    width: 100%;
+    /* 플롯 */
+    float: left;
+    background-color: #010103;
+    border-radius: 4px;
+}
+header .logo {
+    width: 144px;
+    height:50px;
+    /* 플롯 */
+    float: left;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 36px;
+}
+header .logo img {
+    width: 144px;
+    height: 50px;
+}
+header .logo::after {
+    content: "";
+    margin-left: 24px;
+    width:2px;
+    height:50px;
+    background-color: #727281;
+    position: absolute;
+
+    
+}
+header .logo img {
+    width:100%;
+}
+header nav {
+    /* 플롯 */
+    float: left;
+}
+header .gnb {
+    color: #fff;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+header .gnb li {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+header .gnb .depth1 {
+    /* 플롯 */
+    position: relative;
+    float: left;
+    font-size: 24px;
+    letter-spacing:1.8px;
+    margin-top: 24px;
+    margin-left: 36px;
+}
+header .gnb .depth1 ul {
+    position: absolute;
+    top: 50px;
+    background-color: #010103;
+    display: none;
+}
+header .gnb .depth1 ul li {
+    /* display: none; */
+    width:240px;
+    padding: 8px 16px;
+    font-size: 20px;
+    background-color: #010103;
+    cursor: pointer;
+}
+header .playbox {
+    float:right;
+    width:240px;
+    height: 80px;
+    border: 1px solid #000;
+    background-color: #ffcc33;
+    font-family: 'ROBOTO', serif;
+    font-size: 28px;
+    font-weight: bold;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 80px;
+    cursor: pointer;
+}
+
+header .gnb .depth1:hover {
+    background-color: #141414;
+    color: #fff;
+    border-bottom: 2px solid #ffdd22;
+    padding: 2px;
+}
+header .gnb .depth2 li:hover {
+    background-color: #141414;
+    color: #fff;
+    
+}
+header .search {
+    width: 110px;
+    margin-top: 24px;
+    text-align: right;
+    /* 플롯 */
+    float: right;
+}
+
+/* ImageText Deco */
+header .img_deco {
+    text-align: center;
+}
+header .img_deco h2 {
+    color: #fff;
+    font-weight: 700;
+    margin: 0 auto;
+    margin-top: 280px;
+    line-height: 98px;
+    
+}
+header .img_deco ul {
+    position: relative;
+    height:50px;
+    width:100%;
+    margin-top: 20px;
+    padding-left: 265px;
+
+}
+header .img_deco li img:nth-child(1) {
+    height: 44px;
+}
+header .img_deco li {
+    padding: 3px 0 ;
+    width: 240px;
+    height: 50px;
+    float:left;
+    position: relative;
+    background-color: rgba(21,21,21,0.12);
+    font-size: 14px;
+    color: #999;
+    border-radius: 3px;
+}
+
+header .img_deco li:nth-child(1) {
+    padding-top: 4px;
+    margin-right: 15px;
+}
+header .img_deco li:nth-child(3) {
+    margin-left: 15px;
+}
+
+header .img_deco button {
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+    background-color: #ffcc33;
+    border: none;
+    margin-top: 20px;
+}
+header .img_deco button a i {z
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+}
+
+/* Section CardBox */
+.card_box {
+    background-color: #111;
+    box-shadow: 0px 0px 8px #111;
+
+}
+/* 3단 CardBox */
+
+.card_box .card_box_view {
+    background-color: #111;
+    width: 400px;
+    height: 400px;
+    /* 플롯 */
+    float: left;
+    margin-right: 40px;
+    /* 포지션 3단 CardBox 겹치기 */
+    position: relative;
+    left: 0;
+    top: -80px;
+    z-index: 1;
+    border-radius: 4px;
+    border: 1px solid #212121;
+    overflow: hidden;
+    
+}
+
+/* 카드 카테고리명 */
+.card_box .card_box_view h3,
+.card_box .card_box_view h4,
+.card_box .card_box_view h5 {
+    padding: 0px 16px;
+    margin-top: 24px;
+    color: rgb(25, 219, 219);
+    font-size: 14px;
+}
+.card_box .card_box_view h3 {
+    color: rgb(25, 219, 219);
+}
+.card_box .card_box_view h4 {
+    color: rgb(230, 100, 180);
+}
+.card_box .card_box_view h5 {
+    color: rgb(240, 210, 90);
+}
+.card_box .card_box_view p {
+    color: white;
+    font-size: 18px;
+    margin-top: 16px;
+    padding: 0px 24px;
+    cursor: pointer;
+}
+
+.card_box .card_box_view p span {
+    color: rgb(50, 130, 180);
+    font-size: 16px;
+}
+.slide_box div:nth-child(3) {
+    position: relative;
+}
+.card_box .card_box_view .card_box_date{
+    position: absolute;
+    top: 1000px;
+    text-align: end;    
+    color: rgb(50, 130, 180);
+    font-size: 12px;
+    padding-right: 36px;
+    border: 1px solid red;
+}
+.card_box .card_box_view img {
+    width:100%;
+}
+
+/* CardBox Text  */
+.card_box .card_box_info {
+    padding-bottom: 60px;
+}
+/* .card_box .card_box_info h2 {
+    font-size: 12px;
+    color: #807f7f;
+    font-weight: 400;
+    float: left;
+} */
+.card_box .card_box_info h2>span {
+    color: #373636;
+    font-weight: 500;
+}
+.card_box .card_box_info p {
+    margin-top: -60px;
+    font-size: 24px;
+    color: #ffc550;
+    font-weight: 600;
+    /* 플롯 */
+    float: right;
+}
+.card_box .card_box_info p>img {
+    vertical-align: middle;
+    margin-bottom: 4px;
+}
+
+/* Section ABOUTUS */
+.about_us {
+    overflow: hidden;
+    padding: 60px 0 140px;
+    background-image: url('../images/gameguide9.png');
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    box-shadow: 1px 1px 20px #000;
+    overflow: hidden;
+
+}
+
+
+.about_us .about_us_title {
+    color: #e1e1e1;
+    color: rgb(71, 168, 228);
+    padding-left: 48px;
+    margin-bottom: 60px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+
+.about_us .about_us_subtitle h3 {
+    width: 50%;
+    text-align: center;
+    color: #e1e1e1;
+    padding: 12px 0;
+    margin-bottom: 60px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1.5;
+    float: left;
+    
+}
+
+.about_us .about_us_subtitle h3:nth-child(1) {
+    border-top: 8px solid rgb(110, 30, 30);
+    border-left: 1px solid #787878;
+    border-right: 1px solid #787878;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    cursor: pointer;
+
+    
+    
+}
+.about_us .about_us_subtitle h3:nth-child(2) {
+    margin-top: 8px;
+    border-bottom: 1px solid #787878;
+    border-right: 1px solid #787878;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+
+    cursor: pointer;
+
+}
+.about_us .about_us_subtitle h3:nth-child(1):active,
+.about_us .about_us_subtitle h3:nth-child(2):active {
+
+    background-color: rgba(150,150,150, 0.3);
+}
+
+.about_us_tab {
+    margin-top: 60px;
+    margin-bottom: 40px;
+
+}
+
+.about_us_tab h3 {
+    font-size: 36px;
+    color: #efefef;
+    padding-left: 96px;
+}
+
+.about_us_tab>p {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    margin-top: 24px;
+    color: #a1f1f1;
+    padding-left: 200px;
+    margin-bottom: 60px;
+}
+.about_us_tab h4 {
+    width:100%;
+    font-size: 48px;
+    color: #ffee00;
+    text-align: center;  
+    /* border: 1px solid #fff; */
+}
+    
+
+.about_us_tab .playcut {
+    margin-top: 100px;
+
+}
+
+.about_us_tab .playcut div img {
+    width: 100%;;
+}
+.about_us_tab .playcut div {
+    width: 400px;
+    color: red;;
+    float:left;
+}
+.about_us_tab .playcut div:nth-child(2) {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.about_us_tab .playcut div p {
+    padding: 16px;
+    color: #e1e1e1
+}
+
+
+/* CharacterBox */
+
+.character {
+    display: none;
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-image: linear-gradient(135deg, rgba(197, 210, 230, 0.1) 0%, rgba(100, 102, 157, 0.3) 100%);
+    border-radius: 4px;
+
+}
+
+.character p {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    margin-top: 24px;
+    color: #b1f9f9;
+    padding-left: 200px;
+    margin-bottom: 40px;
+}
+
+.character h3 {
+    padding-left: 96px;
+    color: #efefef;
+    font-size: 36px;
+}
+
+.characterbox {
+    width: 100%;
+}
+
+.characterbox div {
+    width: 180px;
+    height: 180px;
+    margin: 0 16.66px;
+    float: left;
+    background-color: rgba(0,0,0,0.125);
+    border-radius: 12px;
+    margin-top: 20px;
+}
+.characterbox div img {
+    width: 70%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 12px;
+
+}
+
+.characterbox div p {
+    color: #f1f2f3  ;
+    margin: 0;
+    margin-top: 12px;
+    padding: 0;
+    text-align: center;
+}
+
+/* Footer */
+.footer {
+    margin: 0 auto;
+    padding: 60px 0;
+    border-top: 3px solid #aaa  ;
+    background-color: #000;
+    color: #fff;
+}
+.footer .footer_nimbleneuron {
+    width: 50%;
+    float:left;
+    
+}
+
+.footer .footer_nimbleneuron img {
+    width: 100px;
+    float:left;
+}
+.footer .footer_nimbleneuron p {
+    padding-left: 24px;
+    font-size: 14px;    
+    float:left;
+}
+
+.footer .footer_information {
+    padding-left: 40px;
+    width: 50%;
+    float:left;
+}
+
+.footer .footer_information img {
+    margin-right: 20px;
+    float:left;
+}
+
+.footer .footer_information table {
+    color: white;
+    font-size: 12px;
+    text-align: left;
+    border-color: #ffee00;
+}
+.footer .footer_information table tr,
+.footer .footer_information table td,
+.footer .footer_information table th {
+    padding-left: 4px;
+    border-color: #ffee00;
+}
